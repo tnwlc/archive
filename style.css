@@ -1,0 +1,120 @@
+/* ===== ARCHIVE PAGE ===== */
+
+:root{
+  --accent:#ff7ab8;  /* 연핑크 */;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.archive-wrap{
+  padding: 40px 40px 40px;
+}
+.archive-hero{
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.archive-hero .sub{
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.fade-line{
+  opacity: .55;
+}
+.category{
+  font-family: 'Space Grotesk', 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+  font-weight:900;
+  letter-spacing:-0.01em;
+  font-size:clamp(32px, 7vw, 96px);
+  line-height:1;
+
+  /* 텍스트에 이미지 채우기 */
+  background-image: url('003.jpeg');     /* ← 경로 맞춰야 함! */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-blend-mode: screen;
+
+  /* 텍스트 색 투명 + 윤곽선 */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.6px rgba(255,255,255,0.75);
+}
+/* grid for archive categories */
+.archive-grid{
+  margin-top: 32px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  column-gap: 80px;
+  row-gap: 32px;
+}
+
+.a-card{
+  display: block;
+  padding: 10px
+  text-decoration: none;
+}
+
+.a-card:hover .a-title{
+  filter:blur(0.8px);
+  text-shadow: 0 12px 28px rgba(0,0,0,0.4);
+}
+
+.a-title{
+  margin:0 0 4px;
+  font-size: 22px;
+  font-weight: 800;
+  color: dimgrey;
+  letter-spacing: -0.01em;
+}
+.a-title:hover{
+  filter: blur(1.5px);
+  text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+.a-sub{
+  margin-top: 3px;
+  font-size: 13px;
+  color: lightgrey
+}
+.archive-wrap{
+  padding: 40px 40px 40px;   /* 위·양옆 패딩을 동일하게 */
+}
+/* simple index */
+.archive-list{
+  margin-top: 40px;
+}
+
+.foot{
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--mute);
+}
+.backhome{
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  padding: .45rem .7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  transition: .16s ease;
+  display: block;
+  margin-bottom: 3px
+}
+
+.backhome:hover{
+  color: var(--accent);
+  filter: blur(1.5px);
+  text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
